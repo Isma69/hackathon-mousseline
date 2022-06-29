@@ -1,5 +1,4 @@
 import Layout from "../component/Layout/Layout";
-import Learning from "../component/Learning/Learning";
 import style from "../styles/Home.module.css";
 
 export default function Home() {
@@ -10,7 +9,6 @@ export default function Home() {
           A culture of sharing and shared learning
         </h2>
       </div>
-      <Learning />
     </Layout>
   );
 }
