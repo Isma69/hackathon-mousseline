@@ -1,4 +1,4 @@
-const db = require('../lib/prisma');
+const db = require('../db');
 
 async function seed() {
   await db.actuality.deleteMany();
