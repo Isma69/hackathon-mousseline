@@ -4,6 +4,7 @@ import ActualityCards from '../../components/actuality/ActualityCards';
 const Actuality = () => {
   return (
     <div>
+      <p>Actuality</p>
       <ActualityCards />
     </div>
   );
