@@ -8,19 +8,23 @@ datasource db {
 }
 
 model actuality {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  title     String   @db.VarChar(255)
-  content   String   @db.Text()
-  author    String   @db.VarChar(255)
+  id         Int      @id @default(autoincrement())
+  createdAt  DateTime @default(now())
+  title      String   @db.VarChar(255)
+  content    String   @db.Text()
+  author     String   @db.VarChar(255)
+  premise    String   @db.VarChar(255)
+  urlPicture String   @db.VarChar(255)
 }
 
 model learning {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  title     String   @db.VarChar(255)
-  content   String   @db.Text()
-  author    String   @db.VarChar(255)
+  id         Int      @id @default(autoincrement())
+  createdAt  DateTime @default(now())
+  title      String   @db.VarChar(255)
+  content    String   @db.Text()
+  author     String   @db.VarChar(255)
+  premise    String   @db.VarChar(255)
+  urlPicture String   @db.VarChar(255)
 }
 
 model share {
@@ -30,6 +34,8 @@ model share {
   type      String   @db.VarChar(255)
   content   String   @db.Text()
   author    String   @db.VarChar(255)
+  premise    String   @db.VarChar(255)
+  urlPicture String  @db.VarChar(255)
 }
 model source {
   id        Int      @id @default(autoincrement())
@@ -39,4 +45,6 @@ model source {
   content   String   @db.Text()
   author    String   @db.VarChar(255)
   url       String   @db.VarChar(255)
+  premise    String   @db.VarChar(255)
+  urlPicture String  @db.VarChar(255)
 }
