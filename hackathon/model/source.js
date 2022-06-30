@@ -1,4 +1,4 @@
-const db = require('../lib/prisma');
+const db = require('../db');
 
 module.exports.createSource = async ({
   title,
@@ -7,6 +7,8 @@ module.exports.createSource = async ({
   author,
   type,
   url,
+  premise,
+  urlPicture,
 }) => {
   return await db.source.create({
     data: {
@@ -16,6 +18,8 @@ module.exports.createSource = async ({
       author,
       type,
       url,
+      premise,
+      urlPicture,
     },
   });
 };
@@ -30,7 +34,8 @@ module.exports.patchSource = async (data) => {
         title: data.title,
         content: data.content,
         type: data.type,
-        url: data.type,
+        url: data.url,
+        urlPicture: data.urlPicture,
       },
     })
     .catch((_) => false);

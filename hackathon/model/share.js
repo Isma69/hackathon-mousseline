@@ -1,4 +1,4 @@
-const db = require('../lib/prisma');
+const db = require('../db');
 
 module.exports.createShare = async ({
   title,
@@ -6,6 +6,8 @@ module.exports.createShare = async ({
   createdAt,
   author,
   type,
+  premise,
+  urlPicture,
 }) => {
   return await db.share.create({
     data: {
@@ -14,6 +16,8 @@ module.exports.createShare = async ({
       createdAt,
       author,
       type,
+      premise,
+      urlPicture,
     },
   });
 };
@@ -28,6 +32,7 @@ module.exports.patchShare = async (data) => {
         title: data.title,
         content: data.content,
         type: data.type,
+        urlPicture: data.urlPicture,
       },
     })
     .catch((_) => false);

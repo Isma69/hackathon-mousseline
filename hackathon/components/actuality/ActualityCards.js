@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import style from '../../styles/ComponentsStyle.module.css';
 
-export default function ActualityCards(actuality) {
+export default function ActualityCards({ actuality }) {
   return (
     <>
       <div className={style.mainWrapper}>
@@ -12,6 +12,8 @@ export default function ActualityCards(actuality) {
                 className={style.imageStyle}
                 src={actuality.urlPicture}
                 alt={actuality.title}
+                height="100%"
+                width="100%"
               />
             </div>
             <div className={style.infoStyle}>
