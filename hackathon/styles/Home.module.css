@@ -1,36 +1,30 @@
 .mainWrapper {
   background-color: #123650;
-<<<<<<< HEAD
-  width: 100%;
-=======
   display: flex;
   justify-content: center;
   width: 100vw;
->>>>>>> dev
 }
 
 .showContent {
   display: none;
 }
+
 .test {
   background-color: white;
-<<<<<<< HEAD
-  margin: 0 15vw;
+  width: 70%;
   min-height: 100vh;
 }
+
 .btnScroll {
   width: 5vw;
   height: 5vh;
   color: #123650;
-=======
-  width: 70%;
-  min-height: 100vh;
 }
+
 .searchBar {
   width: 20vw;
   margin: 5vh 0 0 15vh;
   border: #123650 2px solid;
   border-radius: 5px;
   padding: 10px 10px;
->>>>>>> dev
 }
