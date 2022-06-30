@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const db = require("../lib/prisma");
+=======
+const db = require('../db');
+>>>>>>> dev
 
 module.exports.createActuality = async ({
   title,
@@ -29,11 +33,13 @@ module.exports.patchActuality = async (data) => {
       data: {
         title: data.title,
         content: data.content,
+        urlPicture: data.urlPicture,
       },
     })
     .catch((_) => false);
 };
 
+<<<<<<< HEAD
 module.exports.getActuality = () => {
   db.actuality.findMany({
     orderBy: {
@@ -42,6 +48,9 @@ module.exports.getActuality = () => {
     },
   });
 };
+=======
+module.exports.findAllActualities = () => db.actuality.findMany();
+>>>>>>> dev
 
 module.exports.deleteActuality = (id) => {
   return db.actuality.delete({

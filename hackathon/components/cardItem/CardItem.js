@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import style from '../../styles/ComponentsStyle.module.css';
 
-export default function ActualityCards(actuality) {
+export default function CardItem({ card }) {
   return (
     <>
       <div className={style.mainWrapper}>
@@ -10,18 +10,20 @@ export default function ActualityCards(actuality) {
             <div className={style.imageContainer}>
               <img
                 className={style.imageStyle}
-                src={actuality.urlPicture}
-                alt={actuality.title}
+                src={card.urlPicture}
+                alt={card.title}
+                height="100%"
+                width="100%"
               />
             </div>
             <div className={style.infoStyle}>
-              <h1>{actuality.title}</h1>
-              <p>{actuality.premise}</p>
-              <p>{actuality.createdAt}</p>
+              <h1>{card.title}</h1>
+              <p>{card.premise}</p>
+              <p>{card.createdAt}</p>
             </div>
           </div>
 
-          <p className={style.textStyle}>{actuality.content}</p>
+          <p className={style.textStyle}>{card.content}</p>
         </div>
       </div>
     </>

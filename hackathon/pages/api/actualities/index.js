@@ -1,4 +1,4 @@
-import { createActuality, getActuality } from '../../../model/actuality';
+import { createActuality, findAllActualities } from '../../../model/actuality';
 import base from '../../../middleware/common';
 
 const handlePost = async (req, res) => {
@@ -6,9 +6,8 @@ const handlePost = async (req, res) => {
   return res.status(201).send(actualityPost);
 };
 
-const handleGet = async (req, res) => {
-  const actualityGet = await getActuality();
-  return res.status(201).send(actualityGet);
-};
+async function handleGet(req, res) {
+  res.send(await findAllActualities());
+}
 
 export default base().post(handlePost).get(handleGet);

@@ -1,4 +1,4 @@
-import { createSource, getSource } from '../../../model/source';
+import { createSource, findAllSource } from '../../../model/source';
 import base from '../../../middleware/common';
 
 const handlePost = async (req, res) => {
@@ -6,9 +6,8 @@ const handlePost = async (req, res) => {
   return res.status(201).send(sourcePost);
 };
 
-const handleGet = async (req, res) => {
-  const sourceGet = await getSource();
-  return res.status(201).send(sourceGet);
-};
+async function handleGet(req, res) {
+  res.send(await findAllSource());
+}
 
 export default base().post(handlePost).get(handleGet);
