@@ -1,4 +1,5 @@
 import styleCircleChoice from '../styles/CircleChoice.module.css';
+import { useRouter } from 'next/router';
 
 export default function CircleChoice() {
   return (
