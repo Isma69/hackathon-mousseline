@@ -1,14 +1,15 @@
-import '../styles/globals.css'
-import "../styles/auth.css";
-import "../styles/chats.css";
-import "../styles/index.css";
+import '../styles/globals.css';
+import '../styles/auth.css';
+import '../styles/chats.css';
+import '../styles/index.css';
+import { CardsProvider } from '../context/CardsContext';
 
-import { ContextProvider } from "../context";
-
-export default function App({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
-    <ContextProvider>
+    <CardsProvider>
       <Component {...pageProps} />
-    </ContextProvider>
+    </CardsProvider>
   );
 }
+
+export default MyApp;
