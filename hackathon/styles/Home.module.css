@@ -1,4 +1,10 @@
+.mainWrapper {
+  background-color: #e6e6e6;
+  width: 100%;
+}
 .mainContainer {
-  background-color: red;
-  width: 70vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin: 0 23vw;
 }
