@@ -2,7 +2,7 @@ import Layout from '../components/Layout/Layout';
 import CircleChoice from '../components/CircleChoice';
 import style from '../styles/Home.module.css';
 import { useContext } from 'react';
-import { CardsContext } from '../context/CardsContext';
+import { CardsContext } from '../cardContext/CardsContext';
 import CardItem from '../components/cardItem/CardItem';
 
 export default function Home() {
