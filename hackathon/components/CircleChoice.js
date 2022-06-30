@@ -1,6 +1,6 @@
 import styleCircleChoice from '../styles/CircleChoice.module.css';
 import { useContext } from 'react';
-import { CardsContext } from '../context/CardsContext';
+import { CardsContext } from '../cardContext/CardsContext';
 
 export default function CircleChoice() {
   const {
