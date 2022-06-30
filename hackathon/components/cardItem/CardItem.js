@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import style from '../../styles/ComponentsStyle.module.css';
 
-export default function CardItem({ card }) {
+const CardItem = ({ card }) => {
   return (
     <>
       <div className={style.mainWrapper}>
@@ -17,9 +17,9 @@ export default function CardItem({ card }) {
               />
             </div>
             <div className={style.infoStyle}>
-              <h1>{card.title}</h1>
               <p>{card.premise}</p>
               <p>{card.createdAt}</p>
+              <h1>{card.title}</h1>
             </div>
           </div>
 
@@ -28,4 +28,6 @@ export default function CardItem({ card }) {
       </div>
     </>
   );
-}
+};
+
+export default CardItem;
