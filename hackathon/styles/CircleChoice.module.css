@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap');
+
+.mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.squareContainer {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr auto auto 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.squareLeftTop {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  height: 200px;
+  width: 200px;
+  background-image: url(../public/images/HautGauche.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.squareRightTop {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  height: 200px;
+  width: 200px;
+  background-image: url(../public/images/HautDroit.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.squareRightBottom {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  height: 200px;
+  width: 200px;
+  background-image: url(../public/images/BasGauche.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.squareLeftBottom {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  height: 200px;
+  width: 200px;
+  background-image: url(../public/images/BasDroit.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.squareLeftTop:hover {
+  transform: translate(-20px, -20px);
+  transition: 1s;
+  scale: 1.1;
+}
+
+.squareRightTop:hover {
+  transform: translate(20px, -20px);
+  transition: 1s;
+  scale: 1.1;
+}
+
+.squareRightBottom:hover {
+  transform: translate(-20px, 20px);
+  transition: 1s;
+  scale: 1.1;
+}
+
+.squareLeftBottom:hover {
+  transform: translate(20px, 20px);
+  transition: 1s;
+  scale: 1.1;
+}
+
+.textSource,
+.textActuality,
+.textLearning,
+.textShare {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 150px;
+  opacity: 0%;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+.textActuality {
+  background-color: #c15e88;
+}
+.textLearning {
+  background-color: #ffe4aa;
+}
+.textShare {
+  background-color: #ffa086;
+}
+.textSource {
+  background-color: #ff6c8b;
+}
+
+.squareLeftTop:hover ~ .textActuality {
+  opacity: 100%;
+  transition: 0.5s;
+}
+
+.squareRightTop:hover ~ .textLearning {
+  opacity: 100%;
+  transition: 0.5s;
+}
+
+.squareLeftBottom:hover ~ .textShare {
+  opacity: 100%;
+  transition: 0.5s;
+}
+
+.squareRightBottom:hover ~ .textSource {
+  opacity: 100%;
+  transition: 0.5s;
+}
