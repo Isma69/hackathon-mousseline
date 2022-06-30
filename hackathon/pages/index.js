@@ -1,4 +1,4 @@
-import Layout from '../components/Layout/Layout';
+import Layout from '../components/Layout';
 import CircleChoice from '../components/CircleChoice';
 import style from '../styles/Home.module.css';
 
