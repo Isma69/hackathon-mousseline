@@ -1,10 +1,12 @@
-const db = require('../lib/prisma');
+const db = require("../lib/prisma");
 
 module.exports.createActuality = async ({
   title,
   content,
   createdAt,
   author,
+  premise,
+  urlPicture,
 }) => {
   return await db.actuality.create({
     data: {
@@ -12,6 +14,8 @@ module.exports.createActuality = async ({
       content,
       createdAt,
       author,
+      premise,
+      urlPicture,
     },
   });
 };
@@ -33,8 +37,8 @@ module.exports.patchActuality = async (data) => {
 module.exports.getActuality = () => {
   db.actuality.findMany({
     orderBy: {
-      title: '',
-      author: 'asc',
+      title: "",
+      author: "asc",
     },
   });
 };
