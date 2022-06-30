@@ -35,7 +35,12 @@ module.exports.patchActuality = async (data) => {
     .catch((_) => false);
 };
 
-module.exports.findAllActualities = () => db.actuality.findMany();
+module.exports.findAllActualities = () =>
+  db.actuality.findMany({
+    orderBy: {
+      id: 'desc',
+    },
+  });
 
 module.exports.deleteActuality = (id) => {
   return db.actuality.delete({

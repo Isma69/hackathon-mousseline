@@ -13,5 +13,5 @@ export const ContextProvider = (props) => {
     setSecret,
   };
 
-  return <Context.Provider value={value}>{props.children}</Context.Provider>;
+  return <Context.Provider value={value}>{props.children}</Context.Provider>
 };

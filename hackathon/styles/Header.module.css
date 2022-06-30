@@ -1,5 +1,8 @@
 .header {
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: #123650;
 }
 
 .navBarMainContainer {
@@ -7,6 +10,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: white;
+  width: 70%;
 }
 
 .navBarLogo {
@@ -17,19 +22,5 @@
   background-color: #123650;
   height: 0.2rem;
   width: 100%;
-}
-
-.navBar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  margin: 2rem 0 2rem 0;
-}
-
-.navBar li {
-  padding: 0 4rem;
-  cursor: pointer;
-  color: #123650;
+  margin-bottom: 2rem;
 }
