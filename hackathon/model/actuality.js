@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-const db = require("../lib/prisma");
-=======
-const db = require('../db');
->>>>>>> dev
+const db = require("../db");
 
 module.exports.createActuality = async ({
   title,
@@ -39,18 +35,7 @@ module.exports.patchActuality = async (data) => {
     .catch((_) => false);
 };
 
-<<<<<<< HEAD
-module.exports.getActuality = () => {
-  db.actuality.findMany({
-    orderBy: {
-      title: "",
-      author: "asc",
-    },
-  });
-};
-=======
 module.exports.findAllActualities = () => db.actuality.findMany();
->>>>>>> dev
 
 module.exports.deleteActuality = (id) => {
   return db.actuality.delete({
