@@ -1,5 +1,5 @@
 .mainWrapper {
-  background-color: #e6e6e6;
+  background-color: #123650;
   width: 100%;
 }
 
@@ -8,6 +8,11 @@
 }
 .test {
   background-color: white;
-  margin: 0 23vw;
+  margin: 0 15vw;
   min-height: 100vh;
+}
+.btnScroll {
+  width: 5vw;
+  height: 5vh;
+  color: #123650;
 }
