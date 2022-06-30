@@ -1,4 +1,4 @@
-import ActualityCards from '../../components/actuality/ActualityCards';
+import CardItem from '../../components/cardItem/CardItem';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -17,11 +17,7 @@ const Learning = () => {
   return (
     <div>
       {learningList.map((learning) => (
-        <ActualityCards
-          actuality={learning}
-          key={learning.id}
-          id={learning.id}
-        />
+        <CardItem card={learning} key={learning.id} id={learning.id} />
       ))}
     </div>
   );

@@ -1,4 +1,4 @@
-import ActualityCards from '../../components/actuality/ActualityCards';
+import CardItem from '../../components/cardItem/CardItem';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -17,7 +17,7 @@ const Source = () => {
   return (
     <div>
       {sourceList.map((source) => (
-        <ActualityCards actuality={source} key={source.id} id={source.id} />
+        <CardItem card={source} key={source.id} id={source.id} />
       ))}
     </div>
   );

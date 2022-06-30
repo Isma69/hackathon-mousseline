@@ -1,4 +1,4 @@
-import ActualityCards from '../../components/actuality/ActualityCards';
+import CardItem from '../../components/cardItem/CardItem';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -17,7 +17,7 @@ const Share = () => {
   return (
     <div>
       {shareList.map((share) => (
-        <ActualityCards actuality={share} key={share.id} id={share.id} />
+        <CardItem card={share} key={share.id} id={share.id} />
       ))}
     </div>
   );
