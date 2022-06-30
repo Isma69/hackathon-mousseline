@@ -5,7 +5,11 @@ import style from '../styles/Home.module.css';
 export default function Home() {
   return (
     <Layout>
-      <CircleChoice />
+      <div className={style.mainContainer}>
+        <div>
+          <CircleChoice />
+        </div>
+      </div>
     </Layout>
   );
 }

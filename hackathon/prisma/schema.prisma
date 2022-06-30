@@ -14,7 +14,7 @@ model actuality {
   content    String   @db.Text()
   author     String   @db.VarChar(255)
   premise    String   @db.VarChar(255)
-  urlPicture String  @db.VarChar(255)
+  urlPicture String   @db.VarChar(255)
 }
 
 model learning {

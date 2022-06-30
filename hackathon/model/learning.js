@@ -1,10 +1,12 @@
-const db = require('../lib/prisma');
+const db = require('../db');
 
 module.exports.createLearning = async ({
   title,
   content,
   createdAt,
   author,
+  premise,
+  urlPicture,
 }) => {
   return await db.learning.create({
     data: {
@@ -12,6 +14,8 @@ module.exports.createLearning = async ({
       content,
       createdAt,
       author,
+      premise,
+      urlPicture,
     },
   });
 };
@@ -25,19 +29,13 @@ module.exports.patchLearning = async (data) => {
       data: {
         title: data.title,
         content: data.content,
+        urlPicture: data.urlPicture,
       },
     })
     .catch((_) => false);
 };
 
-module.exports.getLearning = () => {
-  db.learning.findMany({
-    orderBy: {
-      title: '',
-      author: 'asc',
-    },
-  });
-};
+module.exports.findAllLearning = () => db.learning.findMany();
 
 module.exports.deleteLearning = (id) => {
   return db.learning.delete({
