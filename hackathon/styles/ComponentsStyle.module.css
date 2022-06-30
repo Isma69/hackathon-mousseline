@@ -1,0 +1,33 @@
+.mainWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 25vh;
+  margin-top: 10%;
+}
+
+.mainContainer {
+  border: solid 1px black;
+  width: 50vw;
+  border-radius: 10px;
+}
+
+.textStyle {
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  margin: 10px 10px 10px 10px;
+}
+
+.imageContainer {
+  margin: 10px 0 0 10px;
+}
+.imageStyle {
+  border-radius: 5px;
+}
+.topContainerInfo {
+  display: flex;
+  justify-content: flex-start;
+}
+.infoStyle {
+  margin-left: 15px;
+}
