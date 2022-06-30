@@ -17,9 +17,9 @@ export default function CardItem({ card }) {
               />
             </div>
             <div className={style.infoStyle}>
-              <h1>{card.title}</h1>
               <p>{card.premise}</p>
               <p>{card.createdAt}</p>
+              <h1>{card.title}</h1>
             </div>
           </div>
 
