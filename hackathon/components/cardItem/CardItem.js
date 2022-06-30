@@ -23,10 +23,12 @@ const CardItem = ({ card }) => {
               <p>{card.premise}</p>
               <p>{newFormatdate}</p>
               <h1>{card.title}</h1>
+              <h4>{card.type}</h4>
             </div>
           </div>
 
           <p className={style.textStyle}>{card.content}</p>
+          <h4>{card.author}</h4>
         </div>
       </div>
     </>

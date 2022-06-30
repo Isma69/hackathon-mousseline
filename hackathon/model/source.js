@@ -41,7 +41,12 @@ module.exports.patchSource = async (data) => {
     .catch((_) => false);
 };
 
-module.exports.findAllSource = () => db.source.findMany();
+module.exports.findAllSource = () =>
+  db.source.findMany({
+    orderBy: {
+      id: 'desc',
+    },
+  });
 
 module.exports.deleteSource = (id) => {
   return db.source.delete({
