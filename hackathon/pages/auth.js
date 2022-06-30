@@ -36,6 +36,7 @@ export default function Auth() {
             </div>
             <div className="input-container">
                 <input 
+                type="password"
                 placeholder="Password" 
                 className="text-input" 
                 onChange={(e) => setSecret(e.target.value)}
