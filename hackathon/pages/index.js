@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import CircleChoice from '../component/CircleChoice';
-import Layout from '../component/Layout/Layout';
+import Layout from '../components/Layout/Layout';
+import CircleChoice from '../components/CircleChoice';
 import style from '../styles/Home.module.css';
 
 export default function Home() {
