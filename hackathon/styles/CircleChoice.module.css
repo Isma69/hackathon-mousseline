@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 2rem;
 }
 
 .squareContainer {
@@ -59,11 +58,19 @@
   transition: 1s;
   scale: 1.1;
 }
+.activeActuality {
+  transform: translate(-20px, -20px);
+  scale: 1.1;
+}
 
 .squareRightTop:hover {
   transform: translate(20px, -20px);
   transition: 1s;
   scale: 1.1;
+}
+.activeLearning {
+  scale: 1.1;
+  transform: translate(20px, -20px);
 }
 
 .squareRightBottom:hover {
@@ -71,11 +78,19 @@
   transition: 1s;
   scale: 1.1;
 }
+.activeSource {
+  scale: 1.1;
+  transform: translate(-20px, 20px);
+}
 
 .squareLeftBottom:hover {
   transform: translate(20px, 20px);
   transition: 1s;
   scale: 1.1;
+}
+.activeShare {
+  scale: 1.1;
+  transform: translate(20px, 20px);
 }
 
 .textSource,
@@ -100,34 +115,46 @@
 }
 
 .textActuality {
-  background-color: #c15e88;
+  background-color: #8a405f;
 }
 .textLearning {
-  background-color: #ffe4aa;
+  background-color: #ffcc5e;
 }
 .textShare {
-  background-color: #ffa086;
+  background-color: #ff734c;
 }
 .textSource {
-  background-color: #ff6c8b;
+  background-color: #ff3d66;
 }
 
 .squareLeftTop:hover ~ .textActuality {
-  opacity: 100%;
+  opacity: 70%;
   transition: 0.5s;
 }
-
-.squareRightTop:hover ~ .textLearning {
+.activeTextActuality {
   opacity: 100%;
+}
+.squareRightTop:hover ~ .textLearning {
+  opacity: 70%;
   transition: 0.5s;
+}
+.activeTextLearning {
+  opacity: 100%;
 }
 
 .squareLeftBottom:hover ~ .textShare {
-  opacity: 100%;
+  opacity: 70%;
   transition: 0.5s;
+}
+.activeTextShare {
+  opacity: 100%;
 }
 
 .squareRightBottom:hover ~ .textSource {
-  opacity: 100%;
+  opacity: 70%;
   transition: 0.5s;
+}
+
+.activeTextSource {
+  opacity: 100%;
 }

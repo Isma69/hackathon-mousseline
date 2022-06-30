@@ -1,6 +1,8 @@
 .mainWrapper {
-  background-color: #e6e6e6;
-  width: 100%;
+  background-color: #123650;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
 }
 
 .showContent {
@@ -8,6 +10,13 @@
 }
 .test {
   background-color: white;
-  margin: 0 23vw;
+  width: 70%;
   min-height: 100vh;
+}
+.searchBar {
+  width: 20vw;
+  margin: 5vh 0 0 15vh;
+  border: #123650 2px solid;
+  border-radius: 5px;
+  padding: 10px 10px;
 }

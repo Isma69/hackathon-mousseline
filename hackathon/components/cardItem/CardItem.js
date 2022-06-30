@@ -1,7 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import style from '../../styles/ComponentsStyle.module.css';
+import * as dayjs from 'dayjs';
 
 const CardItem = ({ card }) => {
+  const date = card.createdAt;
+  const newFormatdate = dayjs(date).format('MMMM D, YYYY h:mm A');
   return (
     <>
       <div className={style.mainWrapper}>
@@ -18,12 +21,14 @@ const CardItem = ({ card }) => {
             </div>
             <div className={style.infoStyle}>
               <p>{card.premise}</p>
-              <p>{card.createdAt}</p>
+              <p>{newFormatdate}</p>
               <h1>{card.title}</h1>
+              <h4>{card.type}</h4>
             </div>
           </div>
 
           <p className={style.textStyle}>{card.content}</p>
+          <h4>{card.author}</h4>
         </div>
       </div>
     </>

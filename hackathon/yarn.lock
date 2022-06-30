@@ -940,6 +940,11 @@ damerau-levenshtein@^1.0.8:
   resolved "https://registry.npmjs.org/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz"
   integrity sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==
 
+dayjs@^1.11.3:
+  version "1.11.3"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.3.tgz#4754eb694a624057b9ad2224b67b15d552589258"
+  integrity sha512-xxwlswWOlGhzgQ4TKzASQkUhqERI3egRNqgV4ScR8wlANA/A9tZ7miXa44vTTKEq5l7vWoL5G57bG3zA+Kow0A==
+
 debug@^2.2.0, debug@^2.6.9:
   version "2.6.9"
   resolved "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
@@ -2576,6 +2581,11 @@ react-grid-system@^7.1.1:
   integrity sha512-SR5FKJvvN+Sl/OqSpyhLaesfc2cHKxFlP5xL53jUp3m+vF40OYiJbCuW+U43YeNEZQUfR38K3Ec+dVxl9y6MUg==
   dependencies:
     prop-types "^15.7.2"
+
+react-icons@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.4.0.tgz#a13a8a20c254854e1ec9aecef28a95cdf24ef703"
+  integrity sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==
 
 react-is@^16.12.0, react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"

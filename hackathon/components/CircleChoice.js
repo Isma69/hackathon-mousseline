@@ -70,25 +70,57 @@ export default function CircleChoice() {
       <div>
         <div className={styleCircleChoice.squareContainer}>
           <div
-            className={styleCircleChoice.squareLeftTop}
+            className={`${styleCircleChoice.squareLeftTop} ${
+              showActuality ? styleCircleChoice.activeActuality : ''
+            }`}
             onClick={() => handleShowActuality()}
           />
           <div
-            className={styleCircleChoice.squareRightTop}
+            className={`${styleCircleChoice.squareRightTop} ${
+              showLearning ? styleCircleChoice.activeLearning : ''
+            }`}
             onClick={() => handleShowLearning()}
           />
           <div
-            className={styleCircleChoice.squareRightBottom}
+            className={`${styleCircleChoice.squareRightBottom} ${
+              showSource ? styleCircleChoice.activeSource : ''
+            }`}
             onClick={() => handleShowSource()}
           />
           <div
-            className={styleCircleChoice.squareLeftBottom}
+            className={`${styleCircleChoice.squareLeftBottom} ${
+              showShare ? styleCircleChoice.activeShare : ''
+            }`}
             onClick={() => handleShowShare()}
           />
-          <div className={styleCircleChoice.textActuality}>ACTUALITÉ</div>
-          <div className={styleCircleChoice.textLearning}>APPRENTISSAGE</div>
-          <div className={styleCircleChoice.textShare}>PARTAGE</div>
-          <div className={styleCircleChoice.textSource}>SOURCE</div>
+          <div
+            className={`${styleCircleChoice.textActuality} ${
+              showActuality ? styleCircleChoice.activeTextActuality : ''
+            }`}
+          >
+            ACTUALITÉ
+          </div>
+          <div
+            className={`${styleCircleChoice.textLearning} ${
+              showLearning ? styleCircleChoice.activeTextLearning : ''
+            }`}
+          >
+            APPRENTISSAGE
+          </div>
+          <div
+            className={`${styleCircleChoice.textShare} ${
+              showShare ? styleCircleChoice.activeTextShare : ''
+            }`}
+          >
+            PARTAGE
+          </div>
+          <div
+            className={`${styleCircleChoice.textSource} ${
+              showSource ? styleCircleChoice.activeTextSource : ''
+            }`}
+          >
+            SOURCE
+          </div>
         </div>
       </div>
     </div>

@@ -14,12 +14,14 @@
     "buffer": "^6.0.3",
     "chat": "^1.0.8",
     "context-provider": "^1.0.3",
+    "dayjs": "^1.11.3",
     "engine": "^1.0.0",
     "next": "12.2.0",
     "next-connect": "^0.12.2",
     "react": "^18.2.0",
     "react-chat-engine": "^1.11.23",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
     "esbuild": "^0.14.47",
