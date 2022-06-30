@@ -1,16 +1,17 @@
-import Layout from "../components/Layout/Layout";
-import CircleChoice from "../components/CircleChoice";
-import style from "../styles/Home.module.css";
-import { CardsContext } from "../cardContext/CardsContext";
-import CardItem from "../components/cardItem/CardItem";
-import FormActuality from "../components/form/FormActuality";
-import FormShare from "../components/form/FormShare";
-import FormLearning from "../components/form/FormLearning";
-import FormSource from "../components/form/FormSource";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
-import Link from "next/link";
-import { useContext, useState } from "react";
-import { FcSearch } from "react-icons/fc";
+import Layout from '../components/Layout/Layout';
+import CircleChoice from '../components/CircleChoice';
+import style from '../styles/Home.module.css';
+import { CardsContext } from '../cardContext/CardsContext';
+import CardItem from '../components/cardItem/CardItem';
+import FormActuality from '../components/form/FormActuality';
+import FormShare from '../components/form/FormShare';
+import FormLearning from '../components/form/FormLearning';
+import FormSource from '../components/form/FormSource';
+import { BsFillArrowDownCircleFill } from 'react-icons/bs';
+import Link from 'next/link';
+import { useContext, useState } from 'react';
+import { FcSearch } from 'react-icons/fc';
+
 export default function Home() {
   const [searchValue, setSearchValue] = useState("");
   const {
@@ -31,20 +32,20 @@ export default function Home() {
           <div className={style.mainContainer}>
             <CircleChoice />
           </div>
-          <div>
-            <input
-              value={searchValue}
-              type="text"
-              placeholder="Mise à jour, JavaScript, Python..."
-              onChange={(event) => setSearchValue(event.target.value)}
-              className={style.searchBar}
-            />
-            <FcSearch
-              size={40}
-              style={{ verticalAlign: "middle", marginLeft: "10px" }}
-            />
-          </div>
-          <div className={`${showActuality ? "" : style.showContent}`}>
+          <div className={`${showActuality ? '' : style.showContent}`}>
+            <div>
+              <input
+                value={searchValue}
+                type="text"
+                placeholder="Mise à jour, JavaScript, Python..."
+                onChange={(event) => setSearchValue(event.target.value)}
+                className={style.searchBar}
+              />
+              <FcSearch
+                size={40}
+                style={{ verticalAlign: 'middle', marginLeft: '10px' }}
+              />
+            </div>
             <Link href="#formActuality">
               <BsFillArrowDownCircleFill className={style.btnScroll} />
             </Link>
@@ -63,7 +64,20 @@ export default function Home() {
               ))}
             <FormActuality />
           </div>
-          <div className={`${showLearning ? "" : style.showContent}`}>
+          <div className={`${showLearning ? '' : style.showContent}`}>
+            <div>
+              <input
+                value={searchValue}
+                type="text"
+                placeholder="Mise à jour, JavaScript, Python..."
+                onChange={(event) => setSearchValue(event.target.value)}
+                className={style.searchBar}
+              />
+              <FcSearch
+                size={40}
+                style={{ verticalAlign: 'middle', marginLeft: '10px' }}
+              />
+            </div>
             <Link href="#formLearning">
               <BsFillArrowDownCircleFill className={style.btnScroll} />
             </Link>
@@ -76,7 +90,20 @@ export default function Home() {
               ))}
             <FormLearning />
           </div>
-          <div className={`${showShare ? "" : style.showContent}`}>
+          <div className={`${showShare ? '' : style.showContent}`}>
+            <div>
+              <input
+                value={searchValue}
+                type="text"
+                placeholder="Mise à jour, JavaScript, Python..."
+                onChange={(event) => setSearchValue(event.target.value)}
+                className={style.searchBar}
+              />
+              <FcSearch
+                size={40}
+                style={{ verticalAlign: 'middle', marginLeft: '10px' }}
+              />
+            </div>
             <Link href="#formShare">
               <BsFillArrowDownCircleFill className={style.btnScroll} />
             </Link>
@@ -93,7 +120,20 @@ export default function Home() {
               ))}
             <FormShare />
           </div>
-          <div className={`${showSource ? "" : style.showContent}`}>
+          <div className={`${showSource ? '' : style.showContent}`}>
+            <div>
+              <input
+                value={searchValue}
+                type="text"
+                placeholder="Mise à jour, JavaScript, Python..."
+                onChange={(event) => setSearchValue(event.target.value)}
+                className={style.searchBar}
+              />
+              <FcSearch
+                size={40}
+                style={{ verticalAlign: 'middle', marginLeft: '10px' }}
+              />
+            </div>
             <Link href="#formSource">
               <BsFillArrowDownCircleFill className={style.btnScroll} />
             </Link>

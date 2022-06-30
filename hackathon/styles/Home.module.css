@@ -8,11 +8,19 @@
 .showContent {
   display: none;
 }
+
 .test {
   background-color: white;
   width: 70%;
   min-height: 100vh;
 }
+
+.btnScroll {
+  width: 5vw;
+  height: 5vh;
+  color: #123650;
+}
+
 .searchBar {
   width: 20vw;
   margin: 5vh 0 0 15vh;
