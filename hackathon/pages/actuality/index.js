@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Actuality = () => {
-  const [actualityList, setActualityList] = useState('');
+  const [actualityList, setActualityList] = useState([]);
 
   useEffect(() => {
     axios

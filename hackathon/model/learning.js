@@ -35,14 +35,7 @@ module.exports.patchLearning = async (data) => {
     .catch((_) => false);
 };
 
-module.exports.getLearning = () => {
-  db.learning.findMany({
-    orderBy: {
-      title: '',
-      author: 'asc',
-    },
-  });
-};
+module.exports.findAllLearning = () => db.learning.findMany();
 
 module.exports.deleteLearning = (id) => {
   return db.learning.delete({

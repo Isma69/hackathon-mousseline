@@ -41,15 +41,7 @@ module.exports.patchSource = async (data) => {
     .catch((_) => false);
 };
 
-module.exports.getSource = () => {
-  db.source.findMany({
-    orderBy: {
-      title: '',
-      author: 'asc',
-      type: '',
-    },
-  });
-};
+module.exports.findAllSource = () => db.source.findMany();
 
 module.exports.deleteSource = (id) => {
   return db.source.delete({

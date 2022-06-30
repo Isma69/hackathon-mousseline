@@ -38,15 +38,7 @@ module.exports.patchShare = async (data) => {
     .catch((_) => false);
 };
 
-module.exports.getShare = () => {
-  db.share.findMany({
-    orderBy: {
-      title: '',
-      author: 'asc',
-      type: '',
-    },
-  });
-};
+module.exports.findAllShare = () => db.share.findMany();
 
 module.exports.deleteShare = (id) => {
   return db.share.delete({
