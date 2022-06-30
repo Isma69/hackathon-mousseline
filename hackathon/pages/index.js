@@ -68,8 +68,12 @@ export default function Home() {
           </div>
           <div className={`${showShare ? '' : style.showContent}`}>
             {shareList
-              .filter((share) =>
-                share.title.toUpperCase().includes(searchValue.toUpperCase())
+              .filter(
+                (share) =>
+                  share.title
+                    .toUpperCase()
+                    .includes(searchValue.toUpperCase()) ||
+                  share.type.toUpperCase().includes(searchValue.toUpperCase())
               )
               .map((share) => (
                 <CardItem card={share} key={share.id} id={share.id} />
@@ -77,8 +81,12 @@ export default function Home() {
           </div>
           <div className={`${showSource ? '' : style.showContent}`}>
             {sourceList
-              .filter((source) =>
-                source.title.toUpperCase().includes(searchValue.toUpperCase())
+              .filter(
+                (source) =>
+                  source.title
+                    .toUpperCase()
+                    .includes(searchValue.toUpperCase()) ||
+                  source.type.toUpperCase().includes(searchValue.toUpperCase())
               )
               .map((source) => (
                 <CardItem card={source} key={source.id} id={source.id} />
