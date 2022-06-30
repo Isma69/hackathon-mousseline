@@ -1,4 +1,13 @@
-.mainContainer {
-  background-color: red;
-  width: 70vh;
+.mainWrapper {
+  background-color: #e6e6e6;
+  width: 100%;
+}
+
+.showContent {
+  display: none;
+}
+.test {
+  background-color: white;
+  margin: 0 23vw;
+  min-height: 100vh;
 }

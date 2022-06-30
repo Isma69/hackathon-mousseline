@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import style from '../../styles/ComponentsStyle.module.css';
 
-export default function CardItem({ card }) {
+const CardItem = ({ card }) => {
   return (
     <>
       <div className={style.mainWrapper}>
@@ -28,4 +28,6 @@ export default function CardItem({ card }) {
       </div>
     </>
   );
-}
+};
+
+export default CardItem;
