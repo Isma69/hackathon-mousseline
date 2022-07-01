@@ -49,3 +49,9 @@
   border-radius: 5px;
   padding: 10px 10px;
 }
+
+.chatIcon {
+  position: absolute;
+  top: 320px;
+  left: 40px;
+}

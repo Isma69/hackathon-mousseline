@@ -10,6 +10,8 @@ import FormSource from '../components/form/FormSource';
 import { BsFillArrowDownCircleFill } from 'react-icons/bs';
 import Link from 'next/link';
 import { useContext, useState } from 'react';
+import image1 from '../public/image/CHAT-icon-01.png'
+import Image from "next/image";
 
 export default function Home() {
   const [searchValue, setSearchValue] = useState("");
@@ -27,6 +29,17 @@ export default function Home() {
   return (
     <Layout>
       <div className={style.mainWrapper}>
+      <Link href="/auth" className= "chatIcon">
+          <a className={style.chatIcon}>
+            <Image
+              src={image1}
+              width={150}
+              height={150}
+              className="chatIcon"
+              alt="chatIcon"
+            />
+          </a>
+        </Link>
         <div className={style.test}>
           <div className={style.mainContainer}>
             <p>
