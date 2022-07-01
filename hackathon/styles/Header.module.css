@@ -24,3 +24,23 @@
   width: 100%;
   margin-bottom: 3rem;
 }
+
+.footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: #123650;
+}
+
+.FooterMainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 70%;
+}
+
+.FooterMainContainer p {
+  margin-bottom: 3rem;
+}
