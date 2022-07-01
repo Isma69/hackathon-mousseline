@@ -62,8 +62,8 @@ const FormSource = () => {
             <img
               src="/images/share.png"
               alt="design"
-              width="500vw"
-              height="700vh"
+              width="480vw"
+              height="508vh"
             />
           </div>
           <div className={style.right}>
