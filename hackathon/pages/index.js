@@ -10,7 +10,6 @@ import FormSource from '../components/form/FormSource';
 import { BsFillArrowDownCircleFill } from 'react-icons/bs';
 import Link from 'next/link';
 import { useContext, useState } from 'react';
-import { FcSearch } from 'react-icons/fc';
 
 export default function Home() {
   const [searchValue, setSearchValue] = useState('');
@@ -30,10 +29,17 @@ export default function Home() {
       <div className={style.mainWrapper}>
         <div className={style.test}>
           <div className={style.mainContainer}>
+            <p>
+              Le partage d'informations pour un suivi projet plus clair. Le
+              partage d'informations pour une collaboration plus fluide entre
+              les différents services. Le partage d'informations pour renforcer
+              l'esprit d'équipe. Le partage d'informations pour un gain de temps
+              et de productivité. Démocratiser le partage de connaissances
+            </p>
             <CircleChoice />
           </div>
           <div className={`${showActuality ? '' : style.showContent}`}>
-            <div>
+            <div className={style.searchContainer}>
               <input
                 value={searchValue}
                 type="text"
@@ -41,14 +47,10 @@ export default function Home() {
                 onChange={(event) => setSearchValue(event.target.value)}
                 className={style.searchBar}
               />
-              <FcSearch
-                size={40}
-                style={{ verticalAlign: 'middle', marginLeft: '10px' }}
-              />
+              <Link href="#formActuality">
+                <BsFillArrowDownCircleFill className={style.btnScroll} />
+              </Link>
             </div>
-            <Link href="#formActuality">
-              <BsFillArrowDownCircleFill className={style.btnScroll} />
-            </Link>
             {actualityList
               .filter((actuality) =>
                 actuality.title
@@ -65,7 +67,7 @@ export default function Home() {
             <FormActuality />
           </div>
           <div className={`${showLearning ? '' : style.showContent}`}>
-            <div>
+            <div className={style.searchContainer}>
               <input
                 value={searchValue}
                 type="text"
@@ -73,14 +75,10 @@ export default function Home() {
                 onChange={(event) => setSearchValue(event.target.value)}
                 className={style.searchBar}
               />
-              <FcSearch
-                size={40}
-                style={{ verticalAlign: 'middle', marginLeft: '10px' }}
-              />
+              <Link href="#formLearning">
+                <BsFillArrowDownCircleFill className={style.btnScroll} />
+              </Link>
             </div>
-            <Link href="#formLearning">
-              <BsFillArrowDownCircleFill className={style.btnScroll} />
-            </Link>
             {learningList
               .filter((learning) =>
                 learning.title.toUpperCase().includes(searchValue.toUpperCase())
@@ -91,7 +89,7 @@ export default function Home() {
             <FormLearning />
           </div>
           <div className={`${showShare ? '' : style.showContent}`}>
-            <div>
+            <div className={style.searchContainer}>
               <input
                 value={searchValue}
                 type="text"
@@ -99,14 +97,10 @@ export default function Home() {
                 onChange={(event) => setSearchValue(event.target.value)}
                 className={style.searchBar}
               />
-              <FcSearch
-                size={40}
-                style={{ verticalAlign: 'middle', marginLeft: '10px' }}
-              />
+              <Link href="#formShare">
+                <BsFillArrowDownCircleFill className={style.btnScroll} />
+              </Link>
             </div>
-            <Link href="#formShare">
-              <BsFillArrowDownCircleFill className={style.btnScroll} />
-            </Link>
             {shareList
               .filter(
                 (share) =>
@@ -121,7 +115,7 @@ export default function Home() {
             <FormShare />
           </div>
           <div className={`${showSource ? '' : style.showContent}`}>
-            <div>
+            <div className={style.searchContainer}>
               <input
                 value={searchValue}
                 type="text"
@@ -129,14 +123,10 @@ export default function Home() {
                 onChange={(event) => setSearchValue(event.target.value)}
                 className={style.searchBar}
               />
-              <FcSearch
-                size={40}
-                style={{ verticalAlign: 'middle', marginLeft: '10px' }}
-              />
+              <Link href="#formSource">
+                <BsFillArrowDownCircleFill className={style.btnScroll} />
+              </Link>
             </div>
-            <Link href="#formSource">
-              <BsFillArrowDownCircleFill className={style.btnScroll} />
-            </Link>
             {sourceList
               .filter(
                 (source) =>

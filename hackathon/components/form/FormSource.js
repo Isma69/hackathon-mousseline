@@ -1,24 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
-import axios from "axios";
-import { useState } from "react";
-import style from "./FormBis.module.css";
+import axios from 'axios';
+import { useState } from 'react';
+import style from './FormBis.module.css';
 
 const FormSource = () => {
-  const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
-  const [localisation, setLocalisation] = useState("");
-  const [photo, setPhoto] = useState("");
-  const [content, setContent] = useState("");
-  const [linkUrl, setLinkUrl] = useState("");
-  const [type, setType] = useState("");
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [localisation, setLocalisation] = useState('');
+  const [photo, setPhoto] = useState('');
+  const [content, setContent] = useState('');
+  const [linkUrl, setLinkUrl] = useState('');
+  const [type, setType] = useState('');
 
-  const [userTitle, setUserTitle] = useState("");
-  const [userAuthor, setUserAuthor] = useState("");
-  const [userLocalisation, setUserLocalisation] = useState("");
-  const [userPhoto, setUserPhoto] = useState("");
-  const [userContent, setUserContent] = useState("");
-  const [userLinkUrl, setUserLinkUrl] = useState("");
-  const [userType, setUserType] = useState("");
+  const [userTitle, setUserTitle] = useState('');
+  const [userAuthor, setUserAuthor] = useState('');
+  const [userLocalisation, setUserLocalisation] = useState('');
+  const [userPhoto, setUserPhoto] = useState('');
+  const [userContent, setUserContent] = useState('');
+  const [userLinkUrl, setUserLinkUrl] = useState('');
+  const [userType, setUserType] = useState('');
 
   const HandleSubmitSource = (e) => {
     e.preventDefault();
@@ -31,7 +31,7 @@ const FormSource = () => {
     setType(!type);
 
     axios
-      .post("/api/sources", {
+      .post('/api/sources', {
         title: userTitle,
         author: userAuthor,
         premise: userLocalisation,
@@ -44,13 +44,13 @@ const FormSource = () => {
         console.log(response);
       })
       .then(() => {
-        setUserTitle("");
-        setUserAuthor("");
-        setUserLocalisation("");
-        setUserContent("");
-        setUserPhoto("");
-        setUserLinkUrl("");
-        setUserType("");
+        setUserTitle('');
+        setUserAuthor('');
+        setUserLocalisation('');
+        setUserContent('');
+        setUserPhoto('');
+        setUserLinkUrl('');
+        setUserType('');
       });
   };
 
@@ -60,7 +60,7 @@ const FormSource = () => {
         <div className={style.contactBox}>
           <div className={style.left}>
             <img
-              src="/images/source.png"
+              src="/images/share.png"
               alt="design"
               width="500vw"
               height="700vh"

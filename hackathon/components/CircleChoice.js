@@ -98,21 +98,21 @@ export default function CircleChoice() {
               showActuality ? styleCircleChoice.activeTextActuality : ''
             }`}
           >
-            ACTUALITÉ
+            ACTUALITY
           </div>
           <div
             className={`${styleCircleChoice.textLearning} ${
               showLearning ? styleCircleChoice.activeTextLearning : ''
             }`}
           >
-            APPRENTISSAGE
+            LEARNING
           </div>
           <div
             className={`${styleCircleChoice.textShare} ${
               showShare ? styleCircleChoice.activeTextShare : ''
             }`}
           >
-            PARTAGE
+            SHARE
           </div>
           <div
             className={`${styleCircleChoice.textSource} ${
