@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Header from '../Header';
-import style from './Layout.module.css';
+import Footer from '../Footer';
 
 export default function Layout({ children, pageTitle }) {
   return (
@@ -12,6 +12,7 @@ export default function Layout({ children, pageTitle }) {
       </Head>
       <Header />
       {children}
+      <Footer />
     </div>
   );
 }

@@ -4,7 +4,14 @@ import style from '../styles/Home.module.css';
 import { useContext, useState } from 'react';
 import { CardsContext } from '../cardContext/CardsContext';
 import CardItem from '../components/cardItem/CardItem';
-import { FcSearch } from 'react-icons/fc';
+import FormActuality from '../components/form/FormActuality';
+import FormShare from '../components/form/FormShare';
+import FormLearning from '../components/form/FormLearning';
+import FormSource from '../components/form/FormSource';
+import { BsFillArrowDownCircleFill } from 'react-icons/bs';
+import Link from 'next/link';
+import image1 from '../public/image/CHAT-icon-01.png';
+import Image from 'next/image';
 
 export default function Home() {
   const [searchValue, setSearchValue] = useState('');
@@ -18,31 +25,45 @@ export default function Home() {
     showShare,
     showSource,
   } = useContext(CardsContext);
-
   console.log(actualityList);
-
   return (
     <Layout>
       <div className={style.mainWrapper}>
+        <Link href="/auth" className="chatIcon">
+          <a className={style.chatIcon}>
+            <Image
+              src={image1}
+              width={150}
+              height={150}
+              className="chatIcon"
+              alt="chatIcon"
+            />
+          </a>
+        </Link>
         <div className={style.test}>
           <div className={style.mainContainer}>
+            <p>
+              Le partage d'informations pour un suivi projet plus clair. Le
+              partage d'informations pour une collaboration plus fluide entre
+              les différents services. Le partage d'informations pour renforcer
+              l'esprit d'équipe. Le partage d'informations pour un gain de temps
+              et de productivité. Démocratiser le partage de connaissances
+            </p>
             <CircleChoice />
           </div>
-          <div>
-            <input
-              value={searchValue}
-              type="text"
-              placeholder="Mise à jour, JavaScript, Python..."
-              onChange={(event) => setSearchValue(event.target.value)}
-              className={style.searchBar}
-            />
-            <FcSearch
-              size={40}
-              style={{ verticalAlign: 'middle', marginLeft: '10px' }}
-            />
-          </div>
-
           <div className={`${showActuality ? '' : style.showContent}`}>
+            <div className={style.searchContainer}>
+              <input
+                value={searchValue}
+                type="text"
+                placeholder="Mise à jour, JavaScript, Python..."
+                onChange={(event) => setSearchValue(event.target.value)}
+                className={style.searchBar}
+              />
+              <Link href="#formActuality">
+                <BsFillArrowDownCircleFill className={style.btnScroll} />
+              </Link>
+            </div>
             {actualityList
               .filter((actuality) =>
                 actuality.title
@@ -56,8 +77,21 @@ export default function Home() {
                   id={actuality.id}
                 />
               ))}
+            <FormActuality />
           </div>
           <div className={`${showLearning ? '' : style.showContent}`}>
+            <div className={style.searchContainer}>
+              <input
+                value={searchValue}
+                type="text"
+                placeholder="Mise à jour, JavaScript, Python..."
+                onChange={(event) => setSearchValue(event.target.value)}
+                className={style.searchBar}
+              />
+              <Link href="#formLearning">
+                <BsFillArrowDownCircleFill className={style.btnScroll} />
+              </Link>
+            </div>
             {learningList
               .filter((learning) =>
                 learning.title.toUpperCase().includes(searchValue.toUpperCase())
@@ -65,8 +99,21 @@ export default function Home() {
               .map((learning) => (
                 <CardItem card={learning} key={learning.id} id={learning.id} />
               ))}
+            <FormLearning />
           </div>
           <div className={`${showShare ? '' : style.showContent}`}>
+            <div className={style.searchContainer}>
+              <input
+                value={searchValue}
+                type="text"
+                placeholder="Mise à jour, JavaScript, Python..."
+                onChange={(event) => setSearchValue(event.target.value)}
+                className={style.searchBar}
+              />
+              <Link href="#formShare">
+                <BsFillArrowDownCircleFill className={style.btnScroll} />
+              </Link>
+            </div>
             {shareList
               .filter(
                 (share) =>
@@ -78,8 +125,21 @@ export default function Home() {
               .map((share) => (
                 <CardItem card={share} key={share.id} id={share.id} />
               ))}
+            <FormShare />
           </div>
           <div className={`${showSource ? '' : style.showContent}`}>
+            <div className={style.searchContainer}>
+              <input
+                value={searchValue}
+                type="text"
+                placeholder="Mise à jour, JavaScript, Python..."
+                onChange={(event) => setSearchValue(event.target.value)}
+                className={style.searchBar}
+              />
+              <Link href="#formSource">
+                <BsFillArrowDownCircleFill className={style.btnScroll} />
+              </Link>
+            </div>
             {sourceList
               .filter(
                 (source) =>
@@ -91,6 +151,7 @@ export default function Home() {
               .map((source) => (
                 <CardItem card={source} key={source.id} id={source.id} />
               ))}
+            <FormSource />
           </div>
         </div>
       </div>

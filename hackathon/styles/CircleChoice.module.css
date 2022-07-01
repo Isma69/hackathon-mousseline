@@ -11,6 +11,7 @@
   position: relative;
   grid-template-columns: 1fr auto auto 1fr;
   grid-template-rows: 1fr 1fr;
+  margin-bottom: 4rem;
 }
 
 .squareLeftTop {
@@ -128,31 +129,35 @@
 }
 
 .squareLeftTop:hover ~ .textActuality {
-  opacity: 70%;
+  opacity: 100%;
   transition: 0.5s;
 }
+
+.squareRightTop:hover ~ .textLearning {
+  opacity: 100%;
+  transition: 0.5s;
+}
+
+.squareLeftBottom:hover ~ .textShare {
+  opacity: 100%;
+  transition: 0.5s;
+}
+
+.squareRightBottom:hover ~ .textSource {
+  opacity: 100%;
+  transition: 0.5s;
+}
+
 .activeTextActuality {
   opacity: 100%;
 }
-.squareRightTop:hover ~ .textLearning {
-  opacity: 70%;
-  transition: 0.5s;
-}
+
 .activeTextLearning {
   opacity: 100%;
 }
 
-.squareLeftBottom:hover ~ .textShare {
-  opacity: 70%;
-  transition: 0.5s;
-}
 .activeTextShare {
   opacity: 100%;
-}
-
-.squareRightBottom:hover ~ .textSource {
-  opacity: 70%;
-  transition: 0.5s;
 }
 
 .activeTextSource {

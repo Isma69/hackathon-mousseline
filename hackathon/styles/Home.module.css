@@ -5,18 +5,53 @@
   width: 100vw;
 }
 
+.mainContainer {
+  width: 50%;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.mainContainer p {
+  margin-bottom: 3rem;
+  border-radius: 10px;
+  border: 1px solid #123650;
+  padding: 0px 30px 0px 30px;
+}
+
 .showContent {
   display: none;
 }
+
 .test {
   background-color: white;
   width: 70%;
-  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
+.btnScroll {
+  width: 5vw;
+  height: 5vh;
+  color: #123650;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem 0 0 0;
+}
+
 .searchBar {
   width: 20vw;
-  margin: 5vh 0 0 15vh;
   border: #123650 2px solid;
   border-radius: 5px;
   padding: 10px 10px;
+}
+
+.chatIcon {
+  position: absolute;
+  top: 320px;
+  left: 40px;
 }
