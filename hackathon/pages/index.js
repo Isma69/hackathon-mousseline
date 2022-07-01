@@ -12,7 +12,7 @@ import Link from 'next/link';
 import { useContext, useState } from 'react';
 
 export default function Home() {
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
   const {
     actualityList,
     learningList,
