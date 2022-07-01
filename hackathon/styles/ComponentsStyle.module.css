@@ -1,0 +1,43 @@
+.mainWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 25vh;
+  margin: 100px 0px 100px 0px;
+}
+
+.mainContainer {
+  position: relative;
+  width: 50vw;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px #bebebe, -1px -1px 20px #bebebe;
+  padding: 0px 30px 0px 30px;
+}
+
+.textStyle {
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  margin: 30px 10px 30px 10px;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.imageContainer {
+  position: absolute;
+  margin: 10px 0 0px 10px;
+  height: 200px;
+  width: 200px;
+  border-radius: 25px;
+  box-shadow: 1px 1px 20px #bebebe, -1px -1px 20px #bebebe;
+  top: -60px;
+}
+.imageStyle {
+  border-radius: 25px;
+}
+.topContainerInfo {
+  display: flex;
+  justify-content: flex-start;
+}
+.infoStyle {
+  margin-left: 250px;
+}

@@ -1,0 +1,46 @@
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: #123650;
+}
+
+.navBarMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 70%;
+}
+
+.navBarLogo {
+  margin: 2rem 0 2rem 0;
+}
+
+.navBarLine {
+  background-color: #123650;
+  height: 0.2rem;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: #123650;
+}
+
+.FooterMainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 70%;
+}
+
+.FooterMainContainer p {
+  margin-bottom: 3rem;
+}
