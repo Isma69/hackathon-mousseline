@@ -52,8 +52,8 @@ const FormLearning = () => {
             <img
               src="/images/share.png"
               alt="design"
-              width="500vw"
-              height="593vh"
+              width="480vw"
+              height="508vh"
             />
           </div>
           <div className={style.right}>
