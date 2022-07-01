@@ -1,6 +1,7 @@
 import Layout from '../components/Layout/Layout';
 import CircleChoice from '../components/CircleChoice';
 import style from '../styles/Home.module.css';
+import { useContext, useState } from 'react';
 import { CardsContext } from '../cardContext/CardsContext';
 import CardItem from '../components/cardItem/CardItem';
 import FormActuality from '../components/form/FormActuality';
@@ -9,12 +10,11 @@ import FormLearning from '../components/form/FormLearning';
 import FormSource from '../components/form/FormSource';
 import { BsFillArrowDownCircleFill } from 'react-icons/bs';
 import Link from 'next/link';
-import { useContext, useState } from 'react';
-import image1 from '../public/image/CHAT-icon-01.png'
-import Image from "next/image";
+import image1 from '../public/image/CHAT-icon-01.png';
+import Image from 'next/image';
 
 export default function Home() {
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState('');
   const {
     actualityList,
     learningList,
@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <Layout>
       <div className={style.mainWrapper}>
-      <Link href="/auth" className= "chatIcon">
+        <Link href="/auth" className="chatIcon">
           <a className={style.chatIcon}>
             <Image
               src={image1}
