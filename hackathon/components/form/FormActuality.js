@@ -1,20 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
-import axios from "axios";
-import { useState } from "react";
-import style from "./FormBis.module.css";
+import axios from 'axios';
+import { useState } from 'react';
+import style from './FormBis.module.css';
 
 const FormActuality = () => {
-  const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
-  const [localisation, setLocalisation] = useState("");
-  const [photo, setPhoto] = useState("");
-  const [content, setContent] = useState("");
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [localisation, setLocalisation] = useState('');
+  const [photo, setPhoto] = useState('');
+  const [content, setContent] = useState('');
 
-  const [userTitle, setUserTitle] = useState("");
-  const [userAuthor, setUserAuthor] = useState("");
-  const [userLocalisation, setUserLocalisation] = useState("");
-  const [userPhoto, setUserPhoto] = useState("");
-  const [userContent, setUserContent] = useState("");
+  const [userTitle, setUserTitle] = useState('');
+  const [userAuthor, setUserAuthor] = useState('');
+  const [userLocalisation, setUserLocalisation] = useState('');
+  const [userPhoto, setUserPhoto] = useState('');
+  const [userContent, setUserContent] = useState('');
 
   const HandleSubmitActuality = (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ const FormActuality = () => {
     setContent(!content);
 
     axios
-      .post("/api/actualities", {
+      .post('/api/actualities', {
         title: userTitle,
         author: userAuthor,
         premise: userLocalisation,
@@ -36,11 +36,11 @@ const FormActuality = () => {
         console.log(response);
       })
       .then(() => {
-        setUserTitle("");
-        setUserAuthor("");
-        setUserLocalisation("");
-        setUserContent("");
-        setUserPhoto("");
+        setUserTitle('');
+        setUserAuthor('');
+        setUserLocalisation('');
+        setUserContent('');
+        setUserPhoto('');
       });
   };
 
@@ -50,7 +50,7 @@ const FormActuality = () => {
         <div className={style.contactBox}>
           <div className={style.left}>
             <img
-              src="/images/news.jpg"
+              src="/images/share.png"
               alt="design"
               width="500vw"
               height="530vh"
